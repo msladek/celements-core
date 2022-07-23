@@ -16,5 +16,23 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Generate settings.xml for Maven Builds
+      uses: whelk-io/maven-settings-xml-action@v20
+      with:
+        repositories: >
+          [
+            {
+              "id": "celements-releases",
+              "url": "http://maven.celements.ch/releases",
+              "releases": { enabled": "true" },
+              "snapshots": { enabled": "false" }
+            },
+            {
+              "id": "celements-snapshots",
+              "url": "http://maven.celements.ch/snapshots",
+              "releases": { enabled": "false" },
+              "snapshots": { enabled": "true" }
+            }
+          ]
     - name: Build with Maven
       run: mvn -B package --file pom.xml
