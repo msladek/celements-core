@@ -43,6 +43,21 @@ jobs:
         mirrors: >
           [
             {
+              "id": "xwiki-releases-http-unblocker",
+              "mirrorOf": "xwiki-releases",
+              "url": "http://maven.xwiki.org/releases"
+            },
+            {
+              "id": "xwiki-snapshots-http-unblocker",
+              "mirrorOf": "xwiki-snapshots",
+              "url": "http://maven.xwiki.org/snapshots"
+            },
+            {
+              "id": "xwiki-externals-http-unblocker",
+              "mirrorOf": "xwiki-externals",
+              "url": "http://maven.xwiki.org/externals"
+            },
+            {
               "id": "celements-releases-http-unblocker",
               "mirrorOf": "celements-releases",
               "url": "http://maven.celements.ch/releases"
