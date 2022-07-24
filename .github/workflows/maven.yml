@@ -32,6 +32,30 @@ jobs:
               "url": "http://maven.celements.ch/snapshots",
               "releases": { "enabled": "false" },
               "snapshots": { "enabled": "true" }
+            },
+            {
+              "id": "celements-externals",
+              "url": "http://maven.celements.ch/externals",
+              "releases": { "enabled": "true" },
+              "snapshots": { "enabled": "true" }
+            }
+          ]
+        mirrors: >
+          [
+            {
+              "id": "celements-releases-http-unblocker",
+              "mirrorOf": "celements-releases",
+              "url": "http://maven.celements.ch/releases"
+            },
+            {
+              "id": "celements-snapshots-http-unblocker",
+              "mirrorOf": "celements-snapshots",
+              "url": "http://maven.celements.ch/snapshots"
+            },
+            {
+              "id": "celements-externals-http-unblocker",
+              "mirrorOf": "celements-externals",
+              "url": "http://maven.celements.ch/externals"
             }
           ]
     - name: Build with Maven
