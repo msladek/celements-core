@@ -24,14 +24,14 @@ jobs:
             {
               "id": "celements-releases",
               "url": "http://maven.celements.ch/releases",
-              "releases": { enabled": "true" },
-              "snapshots": { enabled": "false" }
+              "releases": { "enabled": "true" },
+              "snapshots": { "enabled": "false" }
             },
             {
               "id": "celements-snapshots",
               "url": "http://maven.celements.ch/snapshots",
-              "releases": { enabled": "false" },
-              "snapshots": { enabled": "true" }
+              "releases": { "enabled": "false" },
+              "snapshots": { "enabled": "true" }
             }
           ]
     - name: Build with Maven
