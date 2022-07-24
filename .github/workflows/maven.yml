@@ -71,6 +71,11 @@ jobs:
               "id": "celements-externals-http-unblocker",
               "mirrorOf": "celements-externals",
               "url": "http://maven.celements.ch/externals"
+            },
+            {
+              "id": "ph.ed.ac.uk-releases-http-unblocker",
+              "mirrorOf": "www.ph.ed.ac.uk-releases",
+              "url": "http://www.ph.ed.ac.uk/maven2"
             }
           ]
     - name: Build with Maven
